@@ -18,7 +18,7 @@ import os
 
 def extract_rar (archive, compression, cmd, verbosity, outdir):
     """Extract a RAR archive."""
-    cmdlist = [cmd, 'x', '--', os.path.abspath(archive)]
+    cmdlist = [cmd, 'x', '-p-', os.path.abspath(archive)]
     return (cmdlist, {'cwd': outdir})
 
 def list_rar (archive, compression, cmd, verbosity):
